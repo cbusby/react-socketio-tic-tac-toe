@@ -197,9 +197,10 @@ export function Game() {
   return (
     <GameContainer>
       {!isGameStarted && (
-        <h2>Waiting for Other Player to Join to Start the Game!</h2>
+        <h2>Waiting for {playerSymbol} Player to Join to Start the Game!</h2>
       )}
       {(!isGameStarted || !isPlayerTurn) && <PlayStopper />}
+      {isGameStarted && isPlayerTurn ? (<h3>Player {playerSymbol}, it's your turn!</h3>) : (<h3>Player {playerSymbol}, wait for your opponent</h3>)}
       {matrix.map((row, rowIdx) => {
         return (
           <RowContainer>

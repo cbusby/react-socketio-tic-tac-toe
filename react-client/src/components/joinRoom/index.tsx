@@ -85,7 +85,7 @@ export function JoinRoom(props: IJoinRoomProps) {
           onChange={handleRoomNameChange}
         />
         <JoinButton type="submit" disabled={isJoining}>
-          {isJoining ? "Joining..." : "Joing"}
+          {isJoining ? "Joining..." : "Join"}
         </JoinButton>
       </JoinRoomContainer>
     </form>
